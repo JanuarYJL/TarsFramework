@@ -1,5 +1,5 @@
 # pull source and build docker auto in docker hub
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 WORKDIR /root/
 

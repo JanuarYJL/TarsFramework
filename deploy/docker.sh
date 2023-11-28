@@ -33,9 +33,9 @@ docker buildx inspect --bootstrap --builder tars-framework-builder
 #docker run --rm --privileged tonistiigi/binfmt:qemu-v5.2.0
 
 if [ "$2" == "amd64" ]; then
-    docker buildx build . --file "deploy/Dockerfile" --tag tarscloud/framework:$1 --platform=linux/amd64 -o type=docker
+    docker buildx build . --file "deploy/Dockerfile" --tag wh-group8/framework:$1 --platform=linux/amd64 -o type=docker
 elif [ "$2" == "arm64" ]; then
-    docker buildx build . --file "deploy/Dockerfile" --tag tarscloud/framework:$1 --platform=linux/arm64  -o type=docker
+    docker buildx build . --file "deploy/Dockerfile" --tag wh-group8/framework:$1 --platform=linux/arm64  -o type=docker
 else
     echo "example: "$0 v2.4.15 arm64
     echo "example: "$0 v2.4.15 amd64

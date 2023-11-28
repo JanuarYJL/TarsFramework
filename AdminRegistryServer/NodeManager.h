@@ -271,7 +271,7 @@ protected:
 	//<uid, current>
 	unordered_map<int, CurrentPtr> _mapIdCurrent;
 
-	int _timeout = 5000;
+	int _timeout = 300000;
 
 	TC_TimeoutQueue<NodeResultInfoPtr>	_timeoutQueue;
 

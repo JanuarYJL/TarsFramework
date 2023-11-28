@@ -814,6 +814,7 @@ int ServerManager::getLogData(const string& application, const string& serverNam
 	NODE_LOG(serverId)->debug() << "[NodeImp::getLogData] cmd:" << newCmd << endl;
 
 #if TARGET_PLATFORM_WINDOWS
+    newCmd = TC_Common::replace(newCmd, "|sed 's/[\\cA-\\cZ]//g'", "");
 	string tmpCmd;
     vector<string> subCmd = TC_Common::sepstr<string>(newCmd, "|");
     for(size_t i = 0; i < subCmd.size(); i++)

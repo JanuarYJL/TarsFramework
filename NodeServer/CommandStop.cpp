@@ -231,9 +231,9 @@ int CommandStop::execute(string& sResult)
 				iStopWaitInterval = STOP_WAIT_INTERVAL;
 			}
 
-			if (iStopWaitInterval > 60)
+			if (iStopWaitInterval > 600)
 			{
-				iStopWaitInterval = 60;
+				iStopWaitInterval = 600;
 			}
 		}
 	    catch (...)
